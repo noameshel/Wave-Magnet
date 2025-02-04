@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave Magnet - יצירת תמונות מגנט בעזרת בינה מלאכותית">
+    <title>יצירה ב-AI | Wave Magnet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/ai-creation.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- אותו תפריט ניווט -->
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>מגנט WAVES</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="gallery.html">גלריה</a></li>
+                <li><a href="ai-creation.html" class="active">יצירה ב-AI</a></li>
+                <li><a href="shop.html">חבילות</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="ai-creation-main">
+        <section class="ai-intro">
+            <h2>יצירת מגנטים בעזרת AI</h2>
+            <p>תארו את המגנט המושלם שלכם, ו-AI יצור אותו במיוחד בשבילכם</p>
+        </section>
+
+        <section class="ai-creator">
+            <div class="creator-container">
+                <div class="prompt-section">
+                    <h3>תארו את התמונה הרצויה</h3>
+                    <textarea id="promptInput" placeholder="לדוגמה: זוג מתחתן על חוף הים בשקיעה, בסגנון אומנותי, עם גלים ברקע..."></textarea>
+                    
+                    <div class="style-options">
+                        <h4>בחרו סגנון:</h4>
+                        <div class="style-buttons">
+                            <button class="style-btn" data-style="realistic">ריאליסטי</button>
+                            <button class="style-btn" data-style="artistic">אומנותי</button>
+                            <button class="style-btn" data-style="cartoon">מצויר</button>
+                            <button class="style-btn" data-style="watercolor">צבעי מים</button>
+                        </div>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn">
+                        <span class="btn-text">צור תמונה</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </div>
+
+                <div class="result-section">
+                    <div id="resultContainer" class="result-container">
+                        <div class="placeholder-text">התמונה שלכם תופיע כאן</div>
+                        <img id="resultImage" src="" alt="" style="display: none;">
+                    </div>
+                    
+                    <div class="action-buttons" style="display: none;">
+                        <button id="regenerateBtn" class="action-btn">צור מחדש</button>
+                        <button id="saveBtn" class="action-btn primary">שמור והזמן</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ai-examples">
+            <h3>דוגמאות ליצירות AI</h3>
+            <div class="examples-grid">
+                <!-- יתווספו דוגמאות דינמית דרך JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- אותו פוטר -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/ai-creation.js"></script>
+</body>
+</html> 

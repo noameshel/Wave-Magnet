@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave Magnet - חבילות צילום והדפסת מגנטים לאירועים">
+    <title>חבילות | Wave Magnet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- אותו תפריט ניווט -->
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>מגנט WAVES</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="gallery.html">גלריה</a></li>
+                <li><a href="ai-creation.html">יצירה ב-AI</a></li>
+                <li><a href="shop.html" class="active">חבילות</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="shop-main">
+        <section class="shop-header">
+            <h2>חבילות מגנטים</h2>
+            <p>בחרו את החבילה המושלמת לאירוע שלכם</p>
+        </section>
+
+        <section class="packages">
+            <div class="package-card basic">
+                <div class="package-header">
+                    <h3>חבילה בסיסית</h3>
+                    <div class="price">
+                        <span class="amount">₪1,500</span>
+                        <span class="duration">לאירוע</span>
+                    </div>
+                </div>
+                <ul class="package-features">
+                    <li>צלם מקצועי למשך 3 שעות</li>
+                    <li>100 מגנטים</li>
+                    <li>עיצוב מסגרת בסיסי</li>
+                    <li>זמן המתנה למגנט: עד 60 שניות</li>
+                </ul>
+                <button class="order-btn" data-package="basic">הזמן עכשיו</button>
+            </div>
+
+            <div class="package-card premium featured">
+                <div class="package-badge">הכי פופולרי</div>
+                <div class="package-header">
+                    <h3>חבילה פרימיום</h3>
+                    <div class="price">
+                        <span class="amount">₪2,500</span>
+                        <span class="duration">לאירוע</span>
+                    </div>
+                </div>
+                <ul class="package-features">
+                    <li>צלם מקצועי למשך 4 שעות</li>
+                    <li>200 מגנטים</li>
+                    <li>עיצוב מסגרת מותאם אישית</li>
+                    <li>זמן המתנה למגנט: עד 30 שניות</li>
+                    <li>אלבום דיגיטלי</li>
+                    <li>קיר LED לצילום</li>
+                </ul>
+                <button class="order-btn featured" data-package="premium">הזמן עכשיו</button>
+            </div>
+
+            <div class="package-card ultimate">
+                <div class="package-header">
+                    <h3>חבילת WAVES</h3>
+                    <div class="price">
+                        <span class="amount">₪3,500</span>
+                        <span class="duration">לאירוע</span>
+                    </div>
+                </div>
+                <ul class="package-features">
+                    <li>2 צלמים מקצועיים למשך 5 שעות</li>
+                    <li>מגנטים ללא הגבלה</li>
+                    <li>עיצוב מסגרת פרימיום</li>
+                    <li>זמן המתנה למגנט: מיידי</li>
+                    <li>אלבום דיגיטלי + מודפס</li>
+                    <li>קיר LED + אביזרי צילום</li>
+                    <li>מגנטי GIF נעים</li>
+                </ul>
+                <button class="order-btn" data-package="ultimate">הזמן עכשיו</button>
+            </div>
+        </section>
+
+        <!-- טופס הזמנה שיופיע כ-Modal -->
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>הזמנת חבילת מגנטים</h3>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="name">שם מלא</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">טלפון</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">תאריך האירוע</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">סוג האירוע</label>
+                        <select id="eventType" required>
+                            <option value="">בחר/י</option>
+                            <option value="wedding">חתונה</option>
+                            <option value="birthday">יום הולדת</option>
+                            <option value="corporate">אירוע חברה</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">הערות נוספות</label>
+                        <textarea id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">שלח/י הזמנה</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- אותו פוטר -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+</html> 

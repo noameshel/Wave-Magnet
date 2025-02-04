@@ -1,0 +1,656 @@
+:root {
+    --primary-color: #00b4d8;
+    --secondary-color: #ff6b6b;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --wave-gradient: linear-gradient(45deg, #00b4d8, #48cae4);
+    --hero-overlay: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    --button-primary: #3db9cf;
+    --button-secondary: #ff8585;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.main-header {
+    background: var(--wave-gradient);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    animation: gentle-wave 3s ease-in-out infinite;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* הגדלת האותיות באנגלית */
+.logo span:last-child {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .logo span {
+        font-size: 1.6rem;
+    }
+    
+    .logo span:last-child {
+        font-size: 1.7rem;
+    }
+    
+    .logo i {
+        font-size: 1.7rem;
+    }
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+}
+
+.logo a:hover i {
+    animation: gentle-wave 2s ease-in-out infinite;
+}
+
+@keyframes gentle-wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.hero {
+    height: 100vh;
+    background-image: var(--hero-overlay), url('../assets/images/waves-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 3rem;
+    animation: fadeIn 1s ease-out;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: slideDown 1s ease-out;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 3.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    animation: slideUp 1s ease-out;
+}
+
+.quick-search {
+    margin-bottom: 2.5rem;
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-buttons a {
+    padding: 1.5rem 2rem;
+    min-height: 100px;
+    width: 200px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* כפתור העלאת תמונות - צבע של חול זהוב */
+.cta-button.primary {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #2d3436;
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(253, 160, 133, 0.3);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 25px rgba(253, 160, 133, 0.4);
+    background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+}
+
+/* כפתור AI - צבע של ים עמוק */
+.ai-btn {
+    background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 147, 233, 0.2);
+}
+
+.ai-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 147, 233, 0.3);
+    background: linear-gradient(135deg, #80D0C7 0%, #0093E9 100%);
+}
+
+/* כפתור הזמנה - צבע של גלים בהירים */
+.cta-button.secondary {
+    background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(72, 198, 239, 0.2);
+}
+
+.cta-button.secondary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(72, 198, 239, 0.3);
+    background: linear-gradient(135deg, #6f86d6 0%, #48c6ef 100%);
+}
+
+/* אפקט גלים בהובר */
+.hero-buttons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.hero-buttons a:hover::before {
+    left: 100%;
+}
+
+/* אנימציה לאייקונים */
+.hero-buttons a i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-buttons a:hover i {
+    transform: translateY(-2px) scale(1.1);
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        min-height: 90px;
+        padding: 1.2rem;
+    }
+
+    .hero-content {
+        margin: 1rem;
+        padding: 2rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background: var(--background-color);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+cite {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.contact-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.contact-info-box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info-box h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.contact-info-box a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.direction-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Social Media */
+.social-media {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+.instagram {
+    background: #e4405f;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.tiktok {
+    background: #000000;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+/* Wave Animation */
+.wave-animation {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('../assets/images/wave.svg') repeat-x;
+    animation: wave 10s linear infinite;
+}
+
+.wave:nth-child(2) {
+    bottom: 10px;
+    opacity: 0.5;
+    animation: wave 7s linear infinite;
+}
+
+.wave:nth-child(3) {
+    bottom: 15px;
+    opacity: 0.2;
+    animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* סטיילינג לסקשן "איך זה עובד" */
+.how-it-works {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.step-card {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.step-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.step-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.step-connector {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* רספונסיביות */
+@media (max-width: 992px) {
+    .steps-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .step-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .step-connector {
+        transform: rotate(90deg);
+    }
+} 

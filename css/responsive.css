@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+} 

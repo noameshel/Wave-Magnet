@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave Magnet - גלריית תמונות מרהיבה של טבע, ים ובריכת גלים">
+    <title>גלריה | Wave Magnet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- אותו תפריט ניווט -->
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-water"></i>
+                    <span>מגנט <span>WAVES</span></span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="gallery.html" class="active">גלריה</a></li>
+                <li><a href="ai-creation.html">יצירה ב-AI</a></li>
+                <li><a href="shop.html">חבילות</a></li>
+                <li><a href="contact.html">צור קשר</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <h1>גלריית מגנטים</h1>
+            <p>אוסף תמונות מרהיב של טבע, ים ובריכת גלים שיהפכו למגנטים מיוחדים</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">הכל</button>
+                <button class="filter-btn" data-filter="nature">טבע ונוף</button>
+                <button class="filter-btn" data-filter="waves">ים וגלים</button>
+                <button class="filter-btn" data-filter="surf">בריכת גלים</button>
+            </div>
+        </section>
+
+        <section class="gallery-grid">
+            <!-- תמונות טבע ונוף -->
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-1.jpg" alt="נוף טבע">
+                <div class="item-overlay">
+                    <h3>מרחבי טבע</h3>
+                    <p>נופים עוצרי נשימה</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-2.jpg" alt="נוף הרים">
+                <div class="item-overlay">
+                    <h3>פסגות נישאות</h3>
+                    <p>הרים מרהיבים בזריחה</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-3.jpg" alt="נוף יער">
+                <div class="item-overlay">
+                    <h3>ירוק עד</h3>
+                    <p>יער קסום בשלכת</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-4.jpg" alt="נוף מדבר">
+                <div class="item-overlay">
+                    <h3>חולות זהב</h3>
+                    <p>קסם המדבר</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-5.jpg" alt="נוף פרחים">
+                <div class="item-overlay">
+                    <h3>שדה פורח</h3>
+                    <p>צבעי האביב</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="nature">
+                <img src="../assets/images/gallery/nature/nature-6.jpg" alt="נוף אגם">
+                <div class="item-overlay">
+                    <h3>מים שקטים</h3>
+                    <p>שלווה טבעית</p>
+                </div>
+            </div>
+
+            <!-- תמונות ים וגלים -->
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-1.jpg" alt="גלים בשקיעה">
+                <div class="item-overlay">
+                    <h3>גלי זהב</h3>
+                    <p>שקיעה קסומה על חוף הים</p>
+                </div>
+            </div>
+            
+            <!-- תמונות גולשים -->
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-1-uri.jpg" alt="גולש על גל גדול">
+                <div class="item-overlay">
+                    <h3>גולש מקצועי</h3>
+                    <p>תפיסת הרגע המושלם על הגל</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-2-anat.jpg" alt="גולש בשקיעה">
+                <div class="item-overlay">
+                    <h3>גלישת שקיעה</h3>
+                    <p>רגע קסום בין גלים לשמיים</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-3-kid.jpg" alt="גולש צעיר">
+                <div class="item-overlay">
+                    <h3>דור העתיד</h3>
+                    <p>הגולש הצעיר בפעולה</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-4-noa.jpg" alt="גולשת על הגל">
+                <div class="item-overlay">
+                    <h3>מלכת הגלים</h3>
+                    <p>שליטה מושלמת בגל</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-5-adi.jpg" alt="גולש בפעולה">
+                <div class="item-overlay">
+                    <h3>ריקוד על הגלים</h3>
+                    <p>תנועה מושלמת על המים</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="surf">
+                <img src="../assets/images/gallery/surf/surf-6-siam.jpg" alt="גולש בשקיעה">
+                <div class="item-overlay">
+                    <h3>שקיעה בסיאם</h3>
+                    <p>רגע קסום של חיבור בין אדם לים</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-2.jpg" alt="גלים סוערים">
+                <div class="item-overlay">
+                    <h3>עוצמת הים</h3>
+                    <p>גלים אדירים בסערה</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-3.jpg" alt="גלים רגועים">
+                <div class="item-overlay">
+                    <h3>שלווה כחולה</h3>
+                    <p>הים במיטבו</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-4.jpg" alt="גלים בזריחה">
+                <div class="item-overlay">
+                    <h3>בוקר של זהב</h3>
+                    <p>זריחה מרהיבה מעל הגלים</p>
+                </div>
+            </div>
+
+            <!-- נוסיף את התמונות החמישית והשישית -->
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-5.jpg" alt="גלים בשחר">
+                <div class="item-overlay">
+                    <h3>שחר חדש</h3>
+                    <p>רוגע של בוקר על הים</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="waves">
+                <img src="../assets/images/gallery/waves/waves-6.jpg" alt="גלים בלילה">
+                <div class="item-overlay">
+                    <h3>קסם הלילה</h3>
+                    <p>הים בשעת ערב קסומה</p>
+                </div>
+            </div>
+            
+            <!-- עוד תמונות לכל קטגוריה... -->
+        </section>
+
+        <!-- מודל לתצוגת תמונה בגדול -->
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content">
+            <div class="modal-caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 מגנט WAVES. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html> 

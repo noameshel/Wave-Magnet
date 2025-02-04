@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wave Magnet - צרו איתנו קשר לפרטים נוספים">
+    <title>צור קשר | Wave Magnet</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <!-- Font Awesome לאייקונים -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- אותו תפריט ניווט -->
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>מגנט WAVES</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="gallery.html">גלריה</a></li>
+                <li><a href="ai-creation.html">יצירה ב-AI</a></li>
+                <li><a href="shop.html">חבילות</a></li>
+                <li><a href="contact.html" class="active">צור קשר</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-header">
+            <h2>צרו איתנו קשר</h2>
+            <p>נשמח לענות על כל שאלה ולהתאים לכם את החבילה המושלמת</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>טלפון</h3>
+                    <p><a href="tel:0501234567" dir="ltr">050-123-4567</a></p>
+                    <p>זמין בימים א'-ה' | 09:00-20:00</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>אימייל</h3>
+                    <p><a href="mailto:info@magnetwaves.co.il">info@magnetwaves.co.il</a></p>
+                    <p>נחזור אליכם תוך 24 שעות</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>כתובת הסטודיו</h3>
+                    <p>רחוב הגלים 123, תל אביב</p>
+                    <p>חניה חינם ללקוחות</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>שעות פעילות</h3>
+                    <p>ימים א'-ה': 09:00-20:00</p>
+                    <p>יום ו': 09:00-14:00</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <h3>שלחו לנו הודעה</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">אימייל</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">נושא הפנייה</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">בחר/י נושא</option>
+                            <option value="booking">הזמנת חבילה</option>
+                            <option value="info">מידע נוסף</option>
+                            <option value="price">הצעת מחיר</option>
+                            <option value="other">אחר</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">תוכן ההודעה</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">שלח/י הודעה</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>איך מגיעים אלינו?</h3>
+            <div class="map-container">
+                <!-- כאן יש להחליף את ה-src עם המיקום האמיתי שלכם -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.5810798641747!2d34.7677813!3d32.0879945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA1JzE2LjgiTiAzNMKwNDYnMDQuMCJF!5e0!3m2!1sen!2sil!4v1625764428482!5m2!1sen!2sil" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <h3>עקבו אחרינו</h3>
+            <div class="social-links">
+                <a href="#" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" target="_blank" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- אותו פוטר -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html> 
